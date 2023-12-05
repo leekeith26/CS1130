@@ -63,23 +63,23 @@ table th, td {
         var IncomeTax, TaxableIncome;
         TaxableIncome = document.getElementById("TaxableIncome").value*1;
     IncomeTax = 0;
-    if (TaxableIncome < 250000)
+    if (TaxableIncome <= 250000)
     {
     IncomeTax = 0;
     }
-    else if (TaxableIncome > 250000 && TaxableIncome < 400000){
+    else if (TaxableIncome > 250000 && TaxableIncome <= 400000){
     IncomeTax = (TaxableIncome - 250000) * .20;
     }
-    else if (TaxableIncome > 400000 && TaxableIncome < 800000){
+    else if (TaxableIncome > 400000 && TaxableIncome <= 800000){
     IncomeTax = (TaxableIncome - 400000) * .25 + 30000;
     }
-    else if (TaxableIncome > 800000 && TaxableIncome < 2000000){
+    else if (TaxableIncome > 800000 && TaxableIncome <= 2000000){
     IncomeTax = (TaxableIncome - 800000) * .30 + 130000;
     }
-    else if (TaxableIncome > 2000000 && TaxableIncome < 8000000){
+    else if (TaxableIncome > 2000000 && TaxableIncome <= 8000000){
     IncomeTax = (TaxableIncome - 2000000) * .32 + 490000;
     }
-    else if (TaxableIncome < 8000000){
+    else if (TaxableIncome > 8000000){
     IncomeTax = (TaxableIncome - 800000) * .35 + 2410000;
     }
 
