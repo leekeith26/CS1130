@@ -1,0 +1,134 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<title>Income Tax Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+table td {
+      border: 1px solid black; border-collapse: collapse;
+        color: green
+        }
+        #calculate {
+        text-align:center;
+         color:#b300b3;
+        }
+
+  .Heading{
+    color: blue 
+  }
+  .input {
+       text-align:center;
+       display:inline-block;
+       width:200px;
+   }
+  
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="Main.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+  </div>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h1 class="w3-wide">Factorial, Sum and Average</h1>
+     <br>
+     <h5>
+        <center>
+          <label for='FSA'>Enter Integer:</label>
+          <br>
+          <input type='number' id='FSA'></input>
+          <br>
+          <button id="calculate">Calculate</button>
+        </center>
+    </h5>
+    <h3>
+    <center>
+    <table>
+      <thead>
+        <tr>
+          <td class="Heading input">Factorial</td>
+          <td class='Heading input'>Sum</td>
+          <td class='Heading input'>Average</td>
+        </tr>
+      </thead>
+      <tr>
+        <td id='Factorial' class='result input'>0</td>
+        <td id='Sum' class='result input'>0</td>
+        <td id='Average' class='result input'>0</td>
+      </tr>
+    </center>
+      </table>
+  </div>
+</div>
+
+<script>
+  document.getElementById("calculate").addEventListener("click",
+    function ()
+{
+        var f,n,i,sum,a,b;
+        f=1;
+        i=1;
+        b=0;
+    n = document.getElementById('FSA').value*1 ;
+    
+    while (i<=n){
+      f=f*i;
+      i++;
+    }
+      
+    document.getElementById("Factorial").innerHTML=f;
+}
+);
+  
+  document.getElementById("calculate").addEventListener("click",
+    function ()
+{
+        var n,i,sum;
+        i=1;
+        sum=0;
+    n = document.getElementById('FSA').value*1 ;
+    
+  
+    do{
+      sum = i + sum;
+      i++; 
+    }
+    while (i<=n)
+      
+    document.getElementById("Sum").innerHTML=sum;
+
+}                                               
+);
+  
+  document.getElementById("calculate").addEventListener("click",
+    function ()
+{
+        var n,i,sum,average;
+        sum=0;
+    n = document.getElementById('FSA').value*1 ;
+    
+    for(i = 1 ; i <= n ; i++){
+      sum = sum + i
+    }
+    average = sum / n;
+    document.getElementById("Average").innerHTML=average;
+   
+}                                               
+);
+</script>
+
+</body>
+</html>
