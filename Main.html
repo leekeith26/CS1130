@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<title>Introduction to Computing Website</title>
+<title>Assignment</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -34,7 +34,7 @@ table th, td {
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Converters<i class="fa fa-caret-down"></i></button>     
+      <button class="w3-padding-large w3-button" title="More" id="Converters">Converters<i class="fa fa-caret-down"></i></button>     
            <div class="w3-dropdown-content w3-bar-block w3-card-4">
              <a href="CelciusToFahrenheit.html" class="w3-bar-item w3-button">Celcius To Fahrenheit</a>
              <a href="FahrenheitToCelcius.html" class="w3-bar-item w3-button">Fahrenheit to Celcius</a>
@@ -43,13 +43,13 @@ table th, td {
       </div>
     </div>
     <a href="IncomeTaxCalculator.html"
-    <button class="w3-padding-large w3-button" title="More">Income Tax Calculator</button>
+    <button class="w3-padding-large w3-button" title="More" id="Tax">Income Tax Calculator</button>
     </a>
     <a href="FSA.html"
-    <button class="w3-padding-large w3-button" title="More">Factorial, Sum and Average</button>
+    <button class="w3-padding-large w3-button" title="More" id="FSA">Factorial, Sum and Average</button>
     </a>
     <a href="Payroll.html"
-    <button class="w3-padding-large w3-button" title="More">Simple Payroll</button>
+    <button class="w3-padding-large w3-button" title="More" id="Payroll">Simple Payroll</button>
     </a>
   </div>
 </div>
@@ -59,17 +59,32 @@ table th, td {
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
     
-    <h1 class="Main">CS 1130 - Introduction to Computing</h2>
+    <h1 class="Main"><font color="aqua">CS 1130 - Introduction to Computing</h2>
      <h4><b>
      Made and Published by:  
      </h2>
       <br>
       <h2 class="Main">Lee Keith I. Tañada</h1>
-     
-      
     
   </div>
+<script>
+   
+  var colors = ["tomato", "brown", "chartreuse", "chocolate", "cyan", "crimson", "salmon", "green", "gray", "turquoise", "violet", "pink", "fuchsia", "gold", "indigo", "khaki", "lavender", "coral", "deepskyblue", "maroon"];
+var index = 0;
 
+function changeColor() {
+	var randomIndex = Math.floor(Math.random() * colors.length);
+	var color = colors[randomIndex];
+	document.getElementById("Converters").style.color = color;
+    document.getElementById("Tax").style.color = color;
+    document.getElementById("FSA").style.color = color;
+    document.getElementById("Payroll").style.color = color;
+}
+setInterval(function() {
+	changeColor();
+}, 1000);      
+  
+      </script>
   
 <!-- End Page Content -->
 </div>
